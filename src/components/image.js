@@ -16,7 +16,7 @@ import Img from "gatsby-image"
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "shilpa.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -30,3 +30,25 @@ const Image = () => {
 }
 
 export default Image
+
+// export const ProfileImage = graphql`
+//   fragment ProfileImage on File {
+//     childImgSharp {
+//       fluid(maxWidth: 200, maxHeight: 200) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+//   }
+//   `
+
+//   export const query = graphql`
+//    query {
+//      image1: file(relativePath { eq: "images/shilpa.png"}) {
+//        ...ProfileImage
+//      }
+
+//      image2: file(relativePAth: { eq: "images/music-master.jpg"}) {
+//        ...squareImage
+//      }
+//     }
+//     `  
